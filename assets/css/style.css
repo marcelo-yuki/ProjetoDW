@@ -1,8 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black; 
+    color: white;
+}
+.header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #067;
+    .logo{
+        height: 60px;
+    }   
+}
 .texto-comum{
     text-align: center;
     color: lightblue;
-};
-.img-logo {
-    max-width: 20 px;
-    max-height: 15 px;
+}
+.navigation{
+    display: flex;
+    gap: 1.5vw;
+    align-items: center;
 }
