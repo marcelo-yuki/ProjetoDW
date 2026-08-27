@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Busque eventos!!!</title>
+    <title>Página de Eventos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="header-menu">
         <img class="logo" alt="Logotipo" title="Logotipo" src="../assets/images/nexticket.png">
         <ul class="navigation">
-            <li>
-                <a href="eventos.html">Eventos</a>
+            <li class="item">
+                <a class="link active" href="eventos.html">Eventos</a>
             </li>
-            <li>
-                <a href="categorias.html">Categorias</a>
+            <li class="item">
+                <a class="link" href="categorias.html">Categorias</a>
             </li>
-            <li>
-                <button><i>Explorar</i></button>
+            <li class="item">
+                <button class="call-to-action"><i>Explorar</i></button>
             </li>
         </ul>
     </nav>
-    <header>
-        <h1 style="text-align: center; color: aquamarine; font-family:Georgia, 'Times New Roman', Times, serif"><i>Onde a sua turma encontra o próximo evento!!</i></h1>   
-        <p class="texto-comum">Aqui você encontra os melhores eventos da região!</p>
-        <p class="texto-comum">Preços acessíveis!</p>
-        <p class="texto-comum">Para todos os gostos!</p>
+    <header class="hero">
+        <h1 class="title" style="text-align: center; color: aquamarine; font-family:Georgia, 'Times New Roman', Times, serif"><i>Onde a sua turma encontra o próximo evento!!</i></h1>   
+        <p class="description">Aqui você encontra os melhores eventos da região!</p>
+        <p class="description">Preços acessíveis!</p>
+        <p class="description">Para todos os gostos!</p>
 
-        <input type="text" placeholder="Buscar por nome do evento..." />
+        <input class="src" type="text" placeholder="Buscar por nome do evento..." />
     </header>
 </body>
 </html>
