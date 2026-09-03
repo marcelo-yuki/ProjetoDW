@@ -58,11 +58,41 @@ body {
 
     .title {
         color: var(--text-white);
+        .highlight{
+            color: purple;
+        }
+        margin-bottom: 15px;
     }
     .description {
         color: lightblue;
+        font-weight: bold;
+        text-align: center;
+        animation: moverVertical 1s ease-in-out infinite alternate;
+        margin-bottom: 20px;
     }
+    
     .search {
-
+        border-radius: 30px;
+        padding: 10px 12vw;
+        background-color: var(--bg-btn);
+        color: var(--text-white);
+        border: 1px solid rgba (255, 255, 255, 0.3);
+        outline: none;
+        transition: 0.2s;
+        max-width: 50%;
+        &:focus{
+            border-color: #066;
+        }
+        &::placeholder{
+            color: var(--text-white);
+        }
+    }
+}
+@keyframes moverVertical {
+    0% {
+        transform: translateY(0px); 
+    }
+    100% {
+        transform: translateY(0.5vh); 
     }
 }
