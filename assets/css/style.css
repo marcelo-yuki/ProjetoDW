@@ -108,7 +108,7 @@ body {
         .filter-list{
             display: flex;
             list-style: none;
-            gap: 15px;
+            gap: 7px;
 
             .item{
                 padding: 5px 10px;
