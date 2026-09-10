@@ -145,6 +145,59 @@ body {
 
             .header{
                 padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: start;
+
+                .highlight {
+                    background-color: #e20543;
+                    color: var(--text-white);
+                    font-size: 10px;
+                    border-radius: 10px;
+                    padding: 2px 5px;
+                }
+                .date{
+                    background-color: #066;
+                    color: var(--text-white);
+                    font-size: 8px;
+                    border-radius: 11px;
+                    padding: 2px 5px;
+                }
+            }
+            .category{
+                font-size: 14px;
+                text-shadow: 1px 1px #067;
+            }
+            .title{
+                text-shadow: 2px 2px #067;
+            }
+            .place{
+                text-shadow: 1px 1px #067;
+            }
+            .information{
+                .quantity{
+
+                }
+                .percentage{
+
+                }
+            }
+            .link{
+                text-decoration: none;
+                color: var(--text-white);
+                font-size: 12px;
+                text-align: center;
+                margin-top: 5px;
+                background-color: #067;
+                width: 100%;
+                padding: 8px 10px;
+                border-radius: 20px;
+                transition: 0.3s;
+                width: fit-content;
+                &:hover{
+                    background-color: #367;
+                }
             }
         }
     }
