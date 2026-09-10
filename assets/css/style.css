@@ -127,4 +127,25 @@ body {
             }
         }
     }
+
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+        justify-content: center;
+
+        .card{
+            width: calc(30% - 8px);
+            border: 1px solid var(--text-white);
+            border-radius: 15px;
+            background-color: #333;
+
+            .header{
+                padding: 10px;
+            }
+        }
+    }
 }
