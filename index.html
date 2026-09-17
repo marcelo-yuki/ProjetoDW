@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Eventos</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="header-menu">
+        <img class="logo" alt="logotipo eventos fatec" title="Logotipo eventos fatec"
+            src="./assets/images/logotipo-eventos-fatec.png" />
+        <ul class="navigation">
+            <li class="item">
+                <a class="link active" href="index.html">Eventos</a>
+            </li>
+            <li class="item">
+                <a class="link" href="index.html#categorias">Categorias</a>
+            </li>
+            <li class="item">
+                <button class="call-to-action">Explorar <i>Eventos</i></button>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 class="title">Onde sua turma <span class="highlight">encontra o próximo evento</span></h1>
+        <p class="description">Aqui você encontra os melhores eventos da região</p>
+
+        <input class="search" type="text" id="busca-eventos" placeholder="Buscar por nome do evento..." />
+    </header>
+
+    <section class="events">
+        <nav class="filter" id="categorias">
+            <ul class="filter-list">
+                <li class="item active" data-categoria="todos">Todos</li>
+                <li class="item" data-categoria="Workshop">Workshop</li>
+                <li class="item" data-categoria="Palestra">Palestra</li>
+                <li class="item" data-categoria="Hackathon">Hackathon</li>
+                <li class="item" data-categoria="Meetup">Meetup</li>
+                <li class="item" data-categoria="Curso">Curso</li>
+                <li class="item" data-categoria="Show">Show</li>
+            </ul>
+        </nav>
+
+        <p class="results-count" id="contador-eventos"></p>
+
+        <div class="list" id="lista-eventos"></div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Eventos Fatec — Projeto de Desenvolvimento Web, 2º ciclo.</p>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
