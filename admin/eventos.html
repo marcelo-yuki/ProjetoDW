@@ -64,79 +64,8 @@
                             <th>Ações</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>HTML do Zero ao Avançado</td>
-                            <td>Workshop</td>
-                            <td>12 de Set. 2026</td>
-                            <td>Bloco C, sala 4</td>
-                            <td>17 / 40</td>
-                            <td class="actions">
-                                <a class="btn-sm btn-edit" href="inscritos.html?evento=workshop-1">Ver inscritos</a>
-                                <button type="button" class="btn-sm btn-edit">Editar</button>
-                                <button type="button" class="btn-sm btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Carreira em Tecnologia: por onde começar</td>
-                            <td>Palestra</td>
-                            <td>15 de Set. 2026</td>
-                            <td>Auditório principal</td>
-                            <td>54 / 120</td>
-                            <td class="actions">
-                                <a class="btn-sm btn-edit" href="inscritos.html?evento=palestra-1">Ver inscritos</a>
-                                <button type="button" class="btn-sm btn-edit">Editar</button>
-                                <button type="button" class="btn-sm btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Hackathon Fatec 24h</td>
-                            <td>Hackathon</td>
-                            <td>10 de Out. 2026</td>
-                            <td>Laboratório de Redes</td>
-                            <td>6 / 60</td>
-                            <td class="actions">
-                                <a class="btn-sm btn-edit" href="inscritos.html?evento=hackathon-1">Ver inscritos</a>
-                                <button type="button" class="btn-sm btn-edit">Editar</button>
-                                <button type="button" class="btn-sm btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Meetup UX &amp; Produto</td>
-                            <td>Meetup</td>
-                            <td>16 de Out. 2026</td>
-                            <td>Espaço Coworking</td>
-                            <td>Esgotado</td>
-                            <td class="actions">
-                                <a class="btn-sm btn-edit" href="inscritos.html?evento=meetup-2">Ver inscritos</a>
-                                <button type="button" class="btn-sm btn-edit">Editar</button>
-                                <button type="button" class="btn-sm btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Curso de JavaScript Moderno</td>
-                            <td>Curso</td>
-                            <td>18 de Set. 2026</td>
-                            <td>Bloco C, sala 4</td>
-                            <td>15 / 35</td>
-                            <td class="actions">
-                                <a class="btn-sm btn-edit" href="inscritos.html?evento=curso-1">Ver inscritos</a>
-                                <button type="button" class="btn-sm btn-edit">Editar</button>
-                                <button type="button" class="btn-sm btn-delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Show de Encerramento do Semestre</td>
-                            <td>Show</td>
-                            <td>5 de Dez. 2026</td>
-                            <td>Pátio Central</td>
-                            <td>180 / 300</td>
-                            <td class="actions">
-                                <a class="btn-sm btn-edit" href="inscritos.html?evento=show-1">Ver inscritos</a>
-                                <button type="button" class="btn-sm btn-edit">Editar</button>
-                                <button type="button" class="btn-sm btn-delete">Excluir</button>
-                            </td>
-                        </tr>
+                    <tbody id="events">
+                        
                     </tbody>
                 </table>
             </div>
@@ -155,12 +84,7 @@
                     <div class="form-field">
                         <label for="campo-categoria">Categoria</label>
                         <select id="campo-categoria" name="categoria">
-                            <option value="Workshop">Workshop</option>
-                            <option value="Palestra">Palestra</option>
-                            <option value="Hackathon">Hackathon</option>
-                            <option value="Meetup">Meetup</option>
-                            <option value="Curso">Curso</option>
-                            <option value="Show">Show</option>
+                           
                         </select>
                     </div>
 
@@ -229,9 +153,11 @@
         <p>© 2026 Eventos Fatec — Projeto de Desenvolvimento Web, 2º ciclo.</p>
     </footer>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
-    <!-- <script src="./js/supabaseClient.js"></script> -->
-    <!-- <script src="./js/eventos.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> 
+    <script src="../supabase-credentials.js"></script>
+    <script src="./js/supabaseClient.js"></script> 
+    <script src="./js/categorias.js"></script>
+    <script src="./js/eventos.js"></script> 
 </body>
 
 </html>
