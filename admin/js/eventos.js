@@ -37,26 +37,60 @@ const eventsController = {
         const categories = await categoriesController.list()
 
         const template = categories.map(item => {
-            return `<option value="${item.id}">${item.nome}</option>`
+            return `<option value="${item.id}">${item.nome}</option>`   
         }).join("")
 
         document.querySelector("#campo-categoria").innerHTML = template
     },
+    validate: (element, value, size) => {
+        if(value.length < size) {
+            const selectError = document.querySelector(`$campo-{element} +.error`);
+            selectError.classList.add("show")
+            return false; 
+        }
+        selectError.classList.remove("show");
+        return true;
+    },
+
     getFormData: () => {
-        const nome = document.querySelector("#campo-titulo").value;
-        if(nome.length < 3) {
-            return alert("O nome deve ter pelo menos 3 caracteres")
+        const nomeSeletor = document.querySelector("#campo-titulo").value;
+        if(!eventsController.validate("titulo", nome, 3)){
+            return;
         }
         const categoria_id = document.querySelector("#campo-categoria").value;
         const data = document.querySelector("#campo-data").value;
+        if(!eventsController.validate("data", nome, 3)){
+            return;
+        }
         const horario = document.querySelector("#campo-horario").value;
+        if(!eventsController.validate("horario", nome, 3)){
+            return;
+        }
         const local = document.querySelector("#campo-local").value;
+        if(!eventsController.validate("local", nome, 3)){
+            return;
+        }
         const endereco = document.querySelector("#campo-endereco").value;
+        if(!eventsController.validate("endereco", nome, 10)){
+            return;
+        }
         const vagas_totais = document.querySelector("#campo-vagas-totais").value;
+        if(!eventsController.validate("vagas-totais", nome, 1)){
+            return;
+        }
         const vagas_restantes = document.querySelector("#campo-vagas-restantes").value;
+        if(!eventsController.validate("vagas-restantes", nome, 1)){
+            return;
+        }
         const destaque = document.querySelector("#campo-destaque").checked;
         const descricao = document.querySelector("#campo-descricao").value;
+        if(!eventsController.validate("descricao", nome, 10)){
+            return;
+        }
         const responsavel = document.querySelector("#campo-organizador").value;
+        if(!eventsController.validate("organizador", nome, 5)){
+            return;
+        }
         const slug = eventsController.slugify(nome);
 
         return {
@@ -77,6 +111,9 @@ const eventsController = {
     bindEventButton: () => {
         document.querySelector("#salvar-evento").addEventListener("click", async () => {
             const data = eventsController.getFormData()
+            if(!data){
+                return;
+            }
             console.log("data", data)
 
             const event = await supabaseClient.from("eventos").insert(data).select()
@@ -99,6 +136,15 @@ const eventsController = {
         }).join("")
 
         document.querySelector("#events").innerHTML = template
+
+        ([...document.querySelectorAll(".btn-delete")].map(btn =>{
+            btn.addEventListener("click", async function(){
+                const id = this.getAttribute("data-id")
+                console.log("id", id)
+                await supabaseClient.from("eventos").delete().eq("id", id)
+                eventsController.populateEventTable()
+            })
+        }));
     },
     init: async () => {
         eventsController.mountCategories()

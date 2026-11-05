@@ -78,6 +78,7 @@
                 <div class="form-field">
                     <label for="campo-titulo">Nome do evento</label>
                     <input type="text" id="campo-titulo" name="titulo" placeholder="Ex: Curso de Banco de Dados" />
+                    <span class="error">O nome é obrigatório!</span>
                 </div>
 
                 <div class="form-row">
@@ -91,11 +92,13 @@
                     <div class="form-field">
                         <label for="campo-data">Data</label>
                         <input type="date" id="campo-data" name="data" />
+                        <span class="error">A data é obrigatória!</span>
                     </div>
 
                     <div class="form-field">
                         <label for="campo-horario">Horário</label>
                         <input type="text" id="campo-horario" name="horario" placeholder="Ex: 19h às 22h" />
+                        <span class="error">Por gentileza informe o horário!</span>
                     </div>
                 </div>
 
@@ -103,17 +106,20 @@
                     <div class="form-field">
                         <label for="campo-local">Local</label>
                         <input type="text" id="campo-local" name="local" placeholder="Ex: Bloco C, sala 4" />
+                        <span class="error">Meu caro informe o local para as pessoas saberem!</span>
                     </div>
 
                     <div class="form-field">
                         <label for="campo-endereco">Endereço completo</label>
                         <input type="text" id="campo-endereco" name="endereco"
                             placeholder="Ex: Campus Fatec São Paulo - Bloco C" />
+                        <span class="error">Será deverás útil, se o pessoal ficar ciente do endereço completo</span>
                     </div>
 
                     <div class="form-field">
                         <label for="campo-organizador">Organização</label>
                         <input type="text" id="campo-organizador" name="organizador" placeholder="Ex: Prof. Ana Ribeiro" />
+                        <span class="error">Informar a organização é obrigatório!</span>
                     </div>
                 </div>
 
@@ -121,12 +127,14 @@
                     <div class="form-field">
                         <label for="campo-vagas-totais">Vagas totais</label>
                         <input type="number" id="campo-vagas-totais" name="vagas_totais" min="0" placeholder="Ex: 40" />
+                        <span class="error">A quantia de vagas é obrigatório!</span>
                     </div>
 
                     <div class="form-field">
                         <label for="campo-vagas-restantes">Vagas restantes</label>
                         <input type="number" id="campo-vagas-restantes" name="vagas_restantes" min="0"
                             placeholder="Ex: 17" />
+                        <span class="error">A quantia de vagas é obrigatório!</span>
                     </div>
 
                     <div class="form-field">
@@ -142,6 +150,7 @@
                     <label for="campo-descricao">Descrição completa</label>
                     <textarea id="campo-descricao" name="descricao"
                         placeholder="Detalhes exibidos na página do evento"></textarea>
+                    <span class="error">A descrição é obrigatória!</span>
                 </div>
 
                 <button type="button" id="salvar-evento" class="call-to-action">Salvar evento</button>
